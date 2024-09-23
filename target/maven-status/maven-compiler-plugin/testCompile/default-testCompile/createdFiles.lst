@@ -1,0 +1,5 @@
+com\amazon\Todays_Deals.class
+com\amazon\TestRunner.class
+com\amazon\Hooks.class
+com\common\amazon\CommonActions.class
+com\locators\amazon\SearchLocators.class
