@@ -27,13 +27,7 @@ public class CommonActions {
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	public static void browserClose() {
-//		driver.close();
 	}
-	
-	//utility file(.bat, .jar)
-	
-	
-	
 	public void typeText(WebElement refName, String value) {
 		refName.sendKeys(value);
 	}
@@ -49,16 +43,6 @@ public class CommonActions {
 	public void rightClick(WebElement e) {
 		a.contextClick(e).build().perform();
 	}
-	
-	//java = sendkeys, click, getattribute
-	//webelement = isdisplayed, isenabled, isvisible, getText, getAttribute
-	//frames = frame, default content, parentframe,
-	// select = value, index, visibletext, ismultiple, getOptions, getfirst
-	// alert = simple, confirm, prompt
-	
-	
-	//findbys, findall, maven properties, maven lifecycle, maven goals, extent report, property files
-	//jenkins, sql
 	
 	public void switchWindow() {
 		String parent = driver.getWindowHandle();
