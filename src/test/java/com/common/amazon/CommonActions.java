@@ -27,6 +27,9 @@ public class CommonActions {
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	public static void browserClose() {
+		if (driver != null) {
+            driver.quit();
+        }
 	}
 	public void typeText(WebElement refName, String value) {
 		refName.sendKeys(value);
@@ -44,6 +47,7 @@ public class CommonActions {
 		a.contextClick(e).build().perform();
 	}
 	
+	
 	public void switchWindow() {
 		String parent = driver.getWindowHandle();
 		Set<String> childUrl = driver.getWindowHandles();
@@ -58,6 +62,10 @@ public class CommonActions {
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(source, dest);
 		
+	}
+	
+	public void refreshPage() {
+		driver.navigate().refresh();
 	}
 	
 }
