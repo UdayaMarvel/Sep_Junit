@@ -27,6 +27,7 @@ public class CommonActions {
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	public static void browserClose() {
+		driver.quit();
 	}
 	public void typeText(WebElement refName, String value) {
 		refName.sendKeys(value);
@@ -59,5 +60,8 @@ public class CommonActions {
 		FileUtils.copyFile(source, dest);
 		
 	}
-	
+
+	public void methodForChecking() {
+		
+	}
 }
