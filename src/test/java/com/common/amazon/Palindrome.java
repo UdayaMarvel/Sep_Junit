@@ -1,8 +1,8 @@
 package com.common.amazon;
 
-public class CommonActions {
+public class Palindrome {
  
-	public static class Palindrome {
+	
 
 		public static void main(String[] args) {
 
