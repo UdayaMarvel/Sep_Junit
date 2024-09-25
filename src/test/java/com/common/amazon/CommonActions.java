@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -62,6 +63,6 @@ public class CommonActions {
 	}
 
 	public void methodForChecking() {
-		
+		WebElement ele = driver.findElement(By.xpath(""));
 	}
 }
