@@ -16,48 +16,23 @@ import org.openqa.selenium.interactions.Actions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonActions {
-	public static WebDriver driver;
-	public static Actions a;
-	
-	public static void browserLaunch() {
-		WebDriverManager.edgedriver().setup();
-	    driver = new EdgeDriver();
-	    driver.manage().window().maximize();
-	    a = new Actions(driver);
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-	public static void browserClose() {
-	}
-	public void typeText(WebElement refName, String value) {
-		refName.sendKeys(value);
-	}
-	public void button(WebElement refName) {
-		refName.click();
-	}
-	public void typeText(String value,WebElement refName) {
-		a.sendKeys(refName, value).build().perform();
-	}
-	public void button() {
-		a.click().build().perform();
-	}
-	public void rightClick(WebElement e) {
-		a.contextClick(e).build().perform();
-	}
-	
-	public void switchWindow() {
-		String parent = driver.getWindowHandle();
-		Set<String> childUrl = driver.getWindowHandles();
-		for (String c : childUrl) {
-			if(!parent.equals(childUrl)) {
-				driver.switchTo().window(c);
-			}
-		}
-	}
-	public void ss(File dest) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot)driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(source, dest);
-		
-	}
-	
-}
+	public static class Palindrome {
+
+		public static void main(String[] args) {
+
+		    String str = "Radar", reverseStr = "";
+		    
+		    int strLength = str.length();
+
+		    for (int i = (strLength - 1); i >=0; --i) {
+		      reverseStr = reverseStr + str.charAt(i);
+		    }
+
+		    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
+		      System.out.println(str + " is a Palindrome String.");
+		    }
+		    else {
+		      System.out.println(str + " is not a Palindrome String.");
+		    }
+		  }
+		}}
