@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CommonActions {
 	public static WebDriver driver;
 	public static Actions a;
-	
+ //launching the driver
 	public static void browserLaunch() {
 		WebDriverManager.edgedriver().setup();
 	    driver = new EdgeDriver();
