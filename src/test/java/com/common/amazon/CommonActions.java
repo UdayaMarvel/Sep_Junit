@@ -62,6 +62,6 @@ public class CommonActions {
 	}
 
 	public void methodForChecking() {
-		
+		driver.findElement(null);
 	}
 }
