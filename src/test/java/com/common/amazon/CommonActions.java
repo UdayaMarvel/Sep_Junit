@@ -27,6 +27,7 @@ public class CommonActions {
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	public static void browserClose() {
+		//driver.close();
 	}
 	public void typeText(WebElement refName, String value) {
 		refName.sendKeys(value);
@@ -34,16 +35,20 @@ public class CommonActions {
 	public void button(WebElement refName) {
 		refName.click();
 	}
+	
+	//action class method
 	public void typeText(String value,WebElement refName) {
 		a.sendKeys(refName, value).build().perform();
 	}
+	//action class method
 	public void button() {
 		a.click().build().perform();
 	}
+	//action class method
 	public void rightClick(WebElement e) {
 		a.contextClick(e).build().perform();
 	}
-	
+	//window handle
 	public void switchWindow() {
 		String parent = driver.getWindowHandle();
 		Set<String> childUrl = driver.getWindowHandles();
