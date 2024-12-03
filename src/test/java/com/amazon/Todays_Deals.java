@@ -43,7 +43,7 @@ public class Todays_Deals extends CommonActions {
 		p.setProperty("user", "marvel");
 		
 		FileOutputStream f2 = new FileOutputStream(f);
-		p.save(f2, "updated in property file");
+		p.save(f2, "updated in property file");//depreciation
 		
 		co.driver.get(newUrl);
 	}
@@ -85,7 +85,7 @@ public class Todays_Deals extends CommonActions {
 	}
 	@Then("Validate")
 	public void validate() {
-	    // Write code here that turns the phrase above into concrete actions
+	    
 	    throw new cucumber.api.PendingException();
 	}
 }
